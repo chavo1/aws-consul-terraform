@@ -101,7 +101,3 @@ resource "aws_instance" "server" {
 output "public_dns_servers" {
   value = "${aws_instance.server.*.public_dns}"
 }
-
-output "public_dns_clients" {
-  value = "${aws_instance.client.*.public_dns}"
-}
