@@ -101,3 +101,27 @@ resource "aws_instance" "server" {
 output "public_dns_servers" {
   value = "${aws_instance.server.*.public_dns}"
 }
+
+output "subnet_id" {
+  value = "${aws_instance.server.*.subnet_id}"
+}
+
+output "instance_type" {
+  value = "${aws_instance.server.*.instance_type}"
+}
+
+output "availability_zone" {
+  value = "${aws_instance.server.*.availability_zone}"
+}
+
+output "key_name" {
+  value = "${aws_instance.server.*.key_name}"
+}
+
+output "aws_iam_instance_profile" {
+  value = "${aws_iam_instance_profile.consul.*.id}"
+}
+
+output "consul_tag" {
+  value = "${aws_instance.server.*.tags.consul}"
+}
