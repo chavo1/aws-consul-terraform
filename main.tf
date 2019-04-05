@@ -125,3 +125,7 @@ output "aws_iam_instance_profile" {
 output "consul_tag" {
   value = "${aws_instance.server.*.tags.consul}"
 }
+
+output "ami_id" {
+  value = "${aws_instance.server.*.ami}"
+}
