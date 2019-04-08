@@ -1,1 +1,1 @@
-# terraform-aws-consul-dc1
+## This repo contains Terraform - AWS - Consul module which deploys Consul cluster in AWS over HTTP.

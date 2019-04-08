@@ -129,3 +129,7 @@ output "consul_tag" {
 output "ami_id" {
   value = "${aws_instance.server.*.ami}"
 }
+
+output "private_ip" {
+  value = "${aws_instance.server.*.private_ip}"
+}
