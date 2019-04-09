@@ -5,14 +5,6 @@ variable "server_count" {
   default = 3
 }
 
-variable "ami" {
-  type = "map"
-
-  default = {
-    server = "ami-0c2073f0a75d77a95"
-  }
-}
-
 variable "subnet" {
   type    = "list"
   default = []
@@ -29,6 +21,12 @@ variable "dcname" {
 
 variable "instance_type" {
   default = "t2.micro"
+}
+
+variable "ami" {
+  type = "map"
+
+  default = {}
 }
 
 variable "key_name" {}
