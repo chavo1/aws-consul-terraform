@@ -1,5 +1,6 @@
 variable "access_key" {}
 variable "secret_key" {}
+
 variable "server_count" {
   default = 3
 }
@@ -31,6 +32,11 @@ variable "dc_net" {
     dc1 = "16"
     dc2 = "32"
   }
+}
+
+variable "ami" {
+  type    = "map"
+  default = {}
 }
 
 variable "region" {
