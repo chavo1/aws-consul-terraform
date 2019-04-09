@@ -1,6 +1,7 @@
 module "consul_sofia" {
   source = "github.com/chavo1/aws-consul-terraform"
 
+  ami           = "${var.ami}"
   access_key    = "${var.access_key}"
   secret_key    = "${var.secret_key}"
   region        = "${var.region}"
@@ -15,6 +16,7 @@ module "consul_sofia" {
 module "consul_varna" {
   source = "github.com/chavo1/aws-consul-terraform"
 
+  ami           = "${var.ami}"
   access_key    = "${var.access_key}"
   secret_key    = "${var.secret_key}"
   region        = "${var.region}"
