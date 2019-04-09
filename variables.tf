@@ -1,20 +1,35 @@
 variable "access_key" {}
 variable "secret_key" {}
-variable "subnet" {}
-variable "instance_type" {}
-variable "key_name" {}
-variable "server_count" {}
-variable "dc_net" {}
-variable "dcname" {}
+variable "server_count" {
+  default = 3
+}
 
-// This is our server and client AMIs - we build with Packer for example and more info
-// https://github.com/chavo1/packer-consul-server
+variable "subnet" {
+  type    = "list"
+  default = []
+}
 
-variable "ami" {
+variable "dcname" {
   type = "map"
 
   default = {
-    server = "ami-00e9cbd23a90befc8"
+    dc1 = "sofia"
+    dc2 = "varna"
+  }
+}
+
+variable "instance_type" {
+  default = "t2.micro"
+}
+
+variable "key_name" {}
+
+variable "dc_net" {
+  type = "map"
+
+  default = {
+    dc1 = "16"
+    dc2 = "32"
   }
 }
 
