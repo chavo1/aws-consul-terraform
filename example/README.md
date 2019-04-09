@@ -23,6 +23,9 @@ subnet = [
     "< VPC subnet ID >"
 ]
 
+ami = {
+    server = "< Your AWS AMI >"
+  }
 ```
 ### We can start with deploying process
 ```
