@@ -1,7 +1,16 @@
 variable "access_key" {}
 variable "secret_key" {}
+
 variable "server_count" {
   default = 3
+}
+
+variable "ami" {
+  type = "map"
+
+  default = {
+    server = "ami-0c2073f0a75d77a95"
+  }
 }
 
 variable "subnet" {
