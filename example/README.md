@@ -1,5 +1,6 @@
-# This example contains a demo of [Consul](https://www.consul.io/) cluster in AWS over HTTP.
-## Joining of the consul agent could be done with:
+# This example contains code which deploys a [Consul](https://www.consul.io/) cluster in AWS from this [module](https://github.com/chavo1/aws-consul-terraform).
+
+## Joining of the consul agent is done with:
 - Cloud Auto-joining more info [HERE](https://www.consul.io/docs/agent/cloud-auto-join.html) and examples [HERE](https://github.com/hashicorp-modules/consul-auto-join-instance-role-aws)
   - | [iam_instance_profile](https://www.terraform.io/docs/providers/aws/r/instance.html#iam_instance_profile)
 
