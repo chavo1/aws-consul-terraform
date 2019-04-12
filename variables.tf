@@ -17,11 +17,7 @@ variable "key_name" {}
 
 variable "dc_net" {}
 
-variable "ami" {
-  type = "map"
-
-  default = {}
-}
+variable "consul_version" {}
 
 variable "region" {
   default = "us-east-1"

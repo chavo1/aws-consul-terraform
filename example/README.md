@@ -13,20 +13,18 @@
 git clone git clone https://github.com/chavo1/aws-consul-terraform.git
 cd consul aws-consul-terraform/example
 ```
-- Create terraform.tfvars file with needed credential and variables:
+- Create terraform.tfvars file with needed credential and variables and set consul version based on your AMI:
 ```
 access_key = "< Your AWS Access_key >"
 secret_key = "< Your AWS Secret_key >"
 key_name = ""
 
+consul_version  = "1.4.4"
+
 subnet = [
     "< VPC subnet ID >",
     "< VPC subnet ID >"
 ]
-
-ami = {
-    server = "< Your AWS AMI >"
-  }
 ```
 ### We can start with deploying process
 ```
