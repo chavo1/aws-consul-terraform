@@ -62,7 +62,7 @@ resource "aws_iam_instance_profile" "consul" {
 
 // Here we create the Consul servers
 resource "aws_instance" "server" {
-  ami                         = "${var.ami["server"]}"
+  ami                         = "${var.consul_version}"
   instance_type               = "${var.instance_type}"
   key_name                    = "${var.key_name}"
   count                       = "${var.server_count}"
